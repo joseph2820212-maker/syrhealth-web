@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SyrHealth — Your connected healthcare journey</title>
+<meta name="description" content="A digital healthcare platform connecting patients, doctors, appointments, medical records, consultations, and trusted health information.">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="forms.css">
+
+<template id="__bundler_thumbnail" data-bg-color="#0F8F8B">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0F8F8B"/>
+    <g transform="translate(600 400)" fill="#fff">
+      <!-- Stylized cross + heartbeat: brand-evocative loading splash -->
+      <rect x="-60" y="-180" width="120" height="360" rx="20"/>
+      <rect x="-180" y="-60" width="360" height="120" rx="20"/>
+    </g>
+    <text x="600" y="640" fill="#fff" text-anchor="middle"
+          font-family="-apple-system, system-ui, sans-serif"
+          font-size="40" font-weight="700" letter-spacing="6">SYR HEALTH</text>
+  </svg>
+</template>
+</head>
+<body>
+
+<!-- ============================================================
+     Header
+     ============================================================ -->
+<header class="nav" data-screen-label="00 Nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo" aria-label="SyrHealth"><img src="assets/syr-health-logo.png" alt="SYR HEALTH"></a>
+    <nav class="nav-links">
+      <a href="#about"   data-lang="en">Platform</a>         <a href="#about"   data-lang="ar">عن المنصة</a>
+      <a href="#patients" data-lang="en">For patients</a>   <a href="#patients" data-lang="ar">للمرضى</a>
+      <a href="#doctors"  data-lang="en">For doctors</a>    <a href="#doctors"  data-lang="ar">للأطباء</a>
+      <a href="#library"  data-lang="en">Medical library</a><a href="#library"  data-lang="ar">المكتبة الطبية</a>
+      <a href="news.html" data-lang="en">Health news</a>    <a href="news.html" data-lang="ar">الأخبار الصحية</a>
+      <a href="#faq"      data-lang="en">FAQ</a>            <a href="#faq"      data-lang="ar">الأسئلة الشائعة</a>
+      <a href="contact.html" data-lang="en">Contact us</a>  <a href="contact.html" data-lang="ar">تواصل معنا</a>
+    </nav>
+    <div class="nav-cta">
+      <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
+        <span data-icon="sparkle" data-size="14"></span>
+        <span id="lang-toggle-label">EN</span>
+      </button>
+      <a href="download.html" class="btn primary">
+        <span data-lang="en">Download app</span>
+        <span data-lang="ar">حمّل التطبيق</span>
+      </a>
+      <button class="nav-burger" id="nav-burger-btn" aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile slide-in nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav-panel">
+      <button class="close" id="mobile-nav-close" aria-label="Close">×</button>
+      <a href="#about"><span data-lang="en">Platform</span><span data-lang="ar">عن المنصة</span></a>
+      <a href="#patients"><span data-lang="en">For patients</span><span data-lang="ar">للمرضى</span></a>
+      <a href="#doctors"><span data-lang="en">For doctors</span><span data-lang="ar">للأطباء</span></a>
+      <a href="#library"><span data-lang="en">Medical library</span><span data-lang="ar">المكتبة الطبية</span></a>
+      <a href="news.html"><span data-lang="en">Health news</span><span data-lang="ar">الأخبار الصحية</span></a>
+      <a href="#faq"><span data-lang="en">FAQ</span><span data-lang="ar">الأسئلة الشائعة</span></a>
+      <a href="contact.html"><span data-lang="en">Contact us</span><span data-lang="ar">تواصل معنا</span></a>
+      <div class="divider"></div>
+      <a href="doctor-signup.html"><span data-lang="en">Join as doctor</span><span data-lang="ar">انضم كطبيب</span></a>
+      <a href="download.html"><span data-lang="en">Download app</span><span data-lang="ar">حمّل التطبيق</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     1. Hero — centered, single column, rich background
+     ============================================================ -->
+<section id="top" class="hero" data-screen-label="01 Hero">
+  <!-- Layered backgrounds -->
+  <div class="hero-bg" aria-hidden="true">
+    <span class="hero-blob blob-1"></span>
+    <span class="hero-blob blob-2"></span>
+    <span class="hero-blob blob-3"></span>
+    <svg class="hero-pulse" viewBox="0 0 1600 220" preserveAspectRatio="none">
+      <path d="M0 110 L260 110 L290 60 L320 160 L360 30 L400 190 L440 110 L760 110 L790 70 L820 150 L850 110 L1180 110 L1210 50 L1240 170 L1270 110 L1600 110"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <svg class="hero-cross" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M40 10h20v30h30v20H60v30H40V60H10V40h30z" fill="currentColor" />
+    </svg>
+    <svg class="hero-cross hero-cross-2" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M40 10h20v30h30v20H60v30H40V60H10V40h30z" fill="currentColor" />
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="hero-center">
+      <img src="assets/syr-health-logo.png" alt="SYR HEALTH" class="hero-logo">
+      <span class="eyebrow">
+        <span data-lang="en">A complete healthcare system</span>
+        <span data-lang="ar">نظام رعاية صحية متكامل</span>
+      </span>
+      <h1>
+        <span data-lang="en">Towards a <span class="accent">complete</span> healthcare system</span>
+        <span data-lang="ar" style="font-weight: 900">نحو نظام صحي <span class="accent">متكامل</span></span>
+      </h1>
+      <p>
+        <span data-lang="en">SyrHealth brings patients, doctors, and clinics into one connected digital platform — appointments, medical records, online consultations, prescriptions, medications, and trusted health information, all in one place.</span>
+        <span data-lang="ar">يجمع SyrHealth المرضى والأطباء والعيادات في منصة رقمية متكاملة — مواعيد، سجلات طبية، استشارات عن بعد، وصفات، أدوية، ومعلومات صحية موثوقة في مكان واحد.</span>
+      </p>
+      <div class="hero-ctas">
+        <a class="btn primary lg" href="#doctors">
+          <span data-icon="stethoscope" data-size="20"></span>
+          <span data-lang="en">For doctors</span>
+          <span data-lang="ar">للأطباء</span>
+        </a>
+        <a class="btn outline lg" href="#patients">
+          <span data-icon="user_plus" data-size="20"></span>
+          <span data-lang="en">For patients</span>
+          <span data-lang="ar">للمرضى</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">3</div>
+          <div class="stat-lbl">
+            <span data-lang="en">connected surfaces · patient, doctor, clinic</span>
+            <span data-lang="ar">واجهات متّصلة · للمريض والطبيب والعيادة</span>
+          </div>
+        </div>
+        <div>
+          <div class="stat-num">1</div>
+          <div class="stat-lbl">
+            <span data-lang="en">unified medical record</span>
+            <span data-lang="ar">سجل طبي موحَّد</span>
+          </div>
+        </div>
+        <div>
+          <div class="stat-num">24/7</div>
+          <div class="stat-lbl">
+            <span data-lang="en">records, available anytime</span>
+            <span data-lang="ar">سجلاتك متاحة في أي وقت</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     2. About SyrHealth
+     ============================================================ -->
+<section id="about" class="section muted" data-screen-label="02 About">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">
+        <span data-lang="en">About SyrHealth</span><span data-lang="ar">عن SyrHealth</span>
+      </span>
+      <h2>
+        <span data-lang="en">Healthcare technology that connects every step of care</span>
+        <span data-lang="ar">تقنية رعاية صحية تربط كل خطوة من خطوات العلاج</span>
+      </h2>
+      <p>
+        <span data-lang="en">SyrHealth is a healthcare technology platform that helps patients manage their medical journey and helps doctors provide more connected, transparent, and accountable care.</span>
+        <span data-lang="ar">SyrHealth منصة تقنية صحية تساعد المرضى على إدارة رحلتهم الطبية وتمكّن الأطباء من تقديم رعاية أكثر تكاملاً وشفافيةً وموثوقيةً.</span>
+      </p>
+    </div>
+    <div class="cards-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="feature-card">
+        <span class="ic" data-icon="user_plus"></span>
+        <h3><span data-lang="en">Patient at the center</span><span data-lang="ar">المريض في المركز</span></h3>
+        <p>
+          <span data-lang="en">Your medical record, your appointments, your medications — owned and managed by you.</span>
+          <span data-lang="ar">سجلك الطبي، مواعيدك، وأدويتك — تحت إدارتك وملكيتك أنت.</span>
+        </p>
+      </div>
+      <div class="feature-card">
+        <span class="ic" data-icon="stethoscope"></span>
+        <h3><span data-lang="en">Trusted clinicians</span><span data-lang="ar">أطباء موثوقون</span></h3>
+        <p>
+          <span data-lang="en">Verified doctors with public profiles, ratings, specialties, and clear consultation options.</span>
+          <span data-lang="ar">أطباء معتمدون بملفات عامة وتقييمات وتخصصات وخيارات استشارة واضحة.</span>
+        </p>
+      </div>
+      <div class="feature-card">
+        <span class="ic" data-icon="shield"></span>
+        <h3><span data-lang="en">Built on trust</span><span data-lang="ar">مبنية على الثقة</span></h3>
+        <p>
+          <span data-lang="en">Encrypted data, granular access permissions, and full audit trails on every record.</span>
+          <span data-lang="ar">تشفير كامل للبيانات وصلاحيات وصول دقيقة وسجل تدقيق لكل عملية.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. What SyrHealth Offers
+     ============================================================ -->
+<section id="offers" class="section" data-screen-label="03 Offers">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">
+        <span data-lang="en">The platform</span><span data-lang="ar">المنصة</span>
+      </span>
+      <h2>
+        <span data-lang="en">Everything healthcare, in one place</span>
+        <span data-lang="ar">كل ما يتعلّق بصحتك في مكان واحد</span>
+      </h2>
+      <p>
+        <span data-lang="en">Nine connected capabilities working together — from finding a doctor to following up on your medications.</span>
+        <span data-lang="ar">تسع إمكانيات متكاملة تعمل معاً — من البحث عن الطبيب وحتى متابعة الأدوية.</span>
+      </p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="feature-card"><span class="ic" data-icon="search"></span>
+        <h3><span data-lang="en">Find doctors</span><span data-lang="ar">البحث عن الأطباء</span></h3>
+        <p><span data-lang="en">Search by specialty, location, language, and consultation type.</span><span data-lang="ar">ابحث عن طبيبك حسب التخصص والموقع واللغة ونوع الاستشارة.</span></p>
+      </div>
+      <div class="feature-card"><span class="ic" data-icon="calendar"></span>
+        <h3><span data-lang="en">Book appointments</span><span data-lang="ar">حجز المواعيد</span></h3>
+        <p><span data-lang="en">In-clinic or remote — confirmed in real time, with reminders.</span><span data-lang="ar">حجز حضوري أو عن بعد، يتم تأكيده فوراً مع تذكيرات قبل الموعد.</span></p>
+      </div>
+      <div class="feature-card"><span class="ic" data-icon="video"></span>
+        <h3><span data-lang="en">Online consultations</span><span data-lang="ar">الاستشارات عن بعد</span></h3>
+        <p><span data-lang="en">Secure video consultations with prescriptions issued straight to your record.</span><span data-lang="ar">استشارات فيديو آمنة مع وصفات طبية تُحفظ مباشرة في سجلك.</span></p>
+      </div>
+      <div class="feature-card"><span class="ic" data-icon="folder"></span>
+        <h3><span data-lang="en">Medical records</span><span data-lang="ar">السجلات الطبية</span></h3>
+        <p><span data-lang="en">A unified medical history accessible to you wherever you go.</span><span data-lang="ar">تاريخ طبي موحّد متاح لك أينما ذهبت.</span></p>
+      </div>
+      <div class="feature-card"><span class="ic" data-icon="file"></span>
+        <h3><span data-lang="en">Medical files</span><span data-lang="ar">الملفات الطبية</span></h3>
+        <p><span data-lang="en">Upload lab results, imaging, and reports — organized automatically.</span><span data-lang="ar">ارفع نتائج التحاليل والأشعة والتقارير — مرتّبة تلقائياً.</span></p>
+      </div>
+      <div class="feature-card"><span class="ic" data-icon="pill"></span>
+        <h3><span data-lang="en">Prescriptions & orders</span><span data-lang="ar">الوصفات والأوامر الطبية</span></h3>
+        <p><span data-lang="en">Digital prescriptions, lab, and imaging orders sent securely.</span><span data-lang="ar">وصفات وأوامر تحاليل وأشعة رقمية تُرسل بأمان.</span></p>
+      </div>
+      <div class="feature-card"><span class="ic" data-icon="alarm"></span>
+        <h3><span data-lang="en">Medication reminders</span><span data-lang="ar">تذكيرات الأدوية</span></h3>
+        <p><span data-lang="en">Never miss a dose — schedule, snooze, and pause from one place.</span><span data-lang="ar">لا تنسَ جرعة — جدوِل وأجّل وأوقف من مكان واحد.</span></p>
+      </div>
+      <div class="feature-card"><span class="ic" data-icon="book"></span>
+        <h3><span data-lang="en">Medical library</span><span data-lang="ar">المكتبة الطبية</span></h3>
+        <p><span data-lang="en">Articles and guides on conditions, symptoms, and healthy living.</span><span data-lang="ar">مقالات وأدلة عن الأمراض والأعراض ونمط الحياة الصحي.</span></p>
+      </div>
+      <div class="feature-card"><span class="ic" data-icon="siren"></span>
+        <h3><span data-lang="en">Emergency information</span><span data-lang="ar">معلومات الطوارئ</span></h3>
+        <p><span data-lang="en">Critical info — blood type, allergies, conditions — accessible when it matters.</span><span data-lang="ar">معلومات حيوية — زمرة الدم، الحساسية، الأمراض — متاحة وقت الحاجة.</span></p>
+      </div>
+      <div class="feature-card"><span class="ic" data-icon="clock"></span>
+        <h3><span data-lang="en">Smart waiting list</span><span data-lang="ar">قائمة انتظار ذكية</span></h3>
+        <p><span data-lang="en">Patients without a fixed slot get matched to the next available opening.</span><span data-lang="ar">المرضى من دون موعد محدد يُطابقون مع أول موعد متاح مناسب.</span></p>
+      </div>
+      <div class="feature-card"><span class="ic" data-icon="activity"></span>
+        <h3><span data-lang="en">Financial reports</span><span data-lang="ar">التقارير المالية</span></h3>
+        <p><span data-lang="en">For doctors: income, expenses, profit trends, and category breakdowns.</span><span data-lang="ar">للطبيب: الدخل والمصاريف واتجاهات الربح وتوزيع المصاريف.</span></p>
+      </div>
+      <div class="feature-card"><span class="ic" data-icon="check_badge"></span>
+        <h3><span data-lang="en">Access requests</span><span data-lang="ar">طلبات الوصول</span></h3>
+        <p><span data-lang="en">Doctors request — patients approve. Every access is logged and reversible.</span><span data-lang="ar">الطبيب يطلب، المريض يوافق. كل وصول مسجَّل وقابل للسحب.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. For Doctors — showcase
+     ============================================================ -->
+<section id="doctors" class="section muted showcase" data-screen-label="04 Doctors">
+  <div class="container">
+    <div class="showcase-grid">
+      <div class="copy">
+        <span class="eyebrow">
+          <span data-lang="en">For doctors</span><span data-lang="ar">للأطباء</span>
+        </span>
+        <h2>
+          <span data-lang="en">A clinical workspace built around your day</span>
+          <span data-lang="ar">مساحة عمل سريرية مصمَّمة حول يومك</span>
+        </h2>
+        <p>
+          <span data-lang="en">Manage patients, appointments, prescriptions, and reports from one secure space — on mobile and on the web.</span>
+          <span data-lang="ar">إدارة المرضى والمواعيد والوصفات والتقارير من مساحة آمنة واحدة — على الجوال والويب.</span>
+        </p>
+        <ul class="bullet-list">
+          <li><span class="check" data-icon="check_badge" data-size="14"></span><span data-lang="en">Daily dashboard — today's appointments, consultations, waiting list, alerts</span><span data-lang="ar">لوحة يومية — مواعيد اليوم والاستشارات وقائمة الانتظار والتنبيهات</span></li>
+          <li><span class="check" data-icon="check_badge" data-size="14"></span><span data-lang="en">Request patient-record access — patients approve, every action logged</span><span data-lang="ar">اطلب صلاحية الوصول لسجل المريض — يوافق المريض، ويُسجَّل كل إجراء</span></li>
+          <li><span class="check" data-icon="check_badge" data-size="14"></span><span data-lang="en">Run the medical-visit form — reason, clinical notes, diagnosis, treatment plan</span><span data-lang="ar">شغّل نموذج الزيارة الطبية — السبب، الملاحظات السريرية، التشخيص، خطة العلاج</span></li>
+          <li><span class="check" data-icon="check_badge" data-size="14"></span><span data-lang="en">Issue digital prescriptions, lab, imaging, and procedure orders</span><span data-lang="ar">إصدار الوصفات الرقمية وأوامر التحاليل والأشعة والإجراءات</span></li>
+          <li><span class="check" data-icon="check_badge" data-size="14"></span><span data-lang="en">Your medical library — favorite drugs, labs, imaging, procedures</span><span data-lang="ar">مكتبتك الطبية — الأدوية والتحاليل والأشعة والإجراءات المفضّلة</span></li>
+          <li><span class="check" data-icon="check_badge" data-size="14"></span><span data-lang="en">Manage your services — type, duration, price, active state</span><span data-lang="ar">إدارة خدماتك — النوع والمدة والسعر والحالة</span></li>
+          <li><span class="check" data-icon="check_badge" data-size="14"></span><span data-lang="en">Track finances — income, expenses, profit, export to Excel or PDF</span><span data-lang="ar">تابع المالية — الدخل والمصاريف والربح، قابلة للتصدير Excel أو PDF</span></li>
+          <li><span class="check" data-icon="check_badge" data-size="14"></span><span data-lang="en">Refer patients to colleagues with one tap</span><span data-lang="ar">حوِّل المريض لزميلك بضغطة واحدة</span></li>
+        </ul>
+        <a class="btn primary" href="doctor-signup.html">
+          <span data-icon="stethoscope" data-size="18"></span>
+          <span data-lang="en">Join as doctor</span>
+          <span data-lang="ar">انضم كطبيب</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Strip of doctor-side feature thumbnails -->
+    <div class="screen-strip">
+      <div class="screen-thumb">
+        <div class="img-wrap"><img src="assets/screens/doctor-schedule.png" alt=""></div>
+        <div class="lbl"><span data-lang="en">Schedule & visits</span><span data-lang="ar">المواعيد والزيارات</span></div>
+        <div class="desc"><span data-lang="en">Appointment details with attached files</span><span data-lang="ar">تفاصيل الموعد مع الملفات المرفقة</span></div>
+      </div>
+      <div class="screen-thumb">
+        <div class="img-wrap"><img src="assets/screens/doctor-patients.png" alt=""></div>
+        <div class="lbl"><span data-lang="en">Patient list</span><span data-lang="ar">قائمة المرضى</span></div>
+        <div class="desc"><span data-lang="en">Filter by today, active, upcoming, all</span><span data-lang="ar">تصفية: اليوم، النشطون، القادمون، الكل</span></div>
+      </div>
+      <div class="screen-thumb">
+        <div class="img-wrap"><img src="assets/screens/doctor-waiting.png" alt=""></div>
+        <div class="lbl"><span data-lang="en">Waiting list</span><span data-lang="ar">قائمة الانتظار</span></div>
+        <div class="desc"><span data-lang="en">Match patients to the next open slot</span><span data-lang="ar">طابق المرضى مع أول موعد متاح</span></div>
+      </div>
+      <div class="screen-thumb">
+        <div class="img-wrap"><img src="assets/screens/doctor-library.png" alt=""></div>
+        <div class="lbl"><span data-lang="en">Doctor library</span><span data-lang="ar">المكتبة الطبية</span></div>
+        <div class="desc"><span data-lang="en">Drugs · labs · imaging · procedures</span><span data-lang="ar">أدوية · تحاليل · أشعة · إجراءات</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. For Patients — showcase
+     ============================================================ -->
+<section id="patients" class="section showcase" data-screen-label="05 Patients">
+  <div class="container">
+    <div class="showcase-grid">
+      <div class="copy">
+        <span class="eyebrow">
+          <span data-lang="en">For patients</span><span data-lang="ar">للمرضى</span>
+        </span>
+        <h2>
+          <span data-lang="en">Your medical record, in your pocket</span>
+          <span data-lang="ar">سجلك الطبي في جيبك</span>
+        </h2>
+        <p>
+          <span data-lang="en">Take control of your medical journey. Find the right doctor, keep your records in one place, follow your medications, and read trusted health information.</span>
+          <span data-lang="ar">تحكّم في رحلتك الطبية. اعثر على الطبيب المناسب، احفظ سجلاتك في مكان واحد، تابع أدويتك، واقرأ معلومات صحية موثوقة.</span>
+        </p>
+        <ul class="bullet-list">
+          <li><span class="check" data-icon="check_badge" data-size="14"></span><span data-lang="en">Search doctors by specialty, location, language, and consultation type</span><span data-lang="ar">ابحث عن الأطباء حسب التخصص والموقع واللغة ونوع الاستشارة</span></li>
+          <li><span class="check" data-icon="check_badge" data-size="14"></span><span data-lang="en">Book in-clinic or remote appointments in seconds</span><span data-lang="ar">احجز موعداً حضورياً أو عن بُعد في ثوانٍ</span></li>
+          <li><span class="check" data-icon="check_badge" data-size="14"></span><span data-lang="en">A unified medical record with QR — accessible anywhere</span><span data-lang="ar">سجل طبي موحَّد برمز QR — متاح أينما ذهبت</span></li>
+          <li><span class="check" data-icon="check_badge" data-size="14"></span><span data-lang="en">Grant and revoke doctor access — see who looked at what, when</span><span data-lang="ar">امنح أو اسحب الإذن للأطباء — وتعرّف من اطّلع على ماذا ومتى</span></li>
+          <li><span class="check" data-icon="check_badge" data-size="14"></span><span data-lang="en">Follow medications with reminders and dose tracking</span><span data-lang="ar">تابع أدويتك مع تذكيرات وجدولة دقيقة للجرعات</span></li>
+          <li><span class="check" data-icon="check_badge" data-size="14"></span><span data-lang="en">Online consultation cards — ask, get a reply, keep the record</span><span data-lang="ar">بطاقات الاستشارة عن الإنترنت — اسأل، احصل على الردّ، واحتفظ بالسجل</span></li>
+          <li><span class="check" data-icon="check_badge" data-size="14"></span><span data-lang="en">Browse a medical library written in Arabic for everyday topics</span><span data-lang="ar">تصفّح مكتبة طبية بالعربية لمواضيع يومية</span></li>
+        </ul>
+        <a class="btn primary" href="download.html">
+          <span data-icon="download" data-size="18"></span>
+          <span data-lang="en">Download patient app</span>
+          <span data-lang="ar">حمّل تطبيق المريض</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="screen-strip">
+      <div class="screen-thumb">
+        <div class="img-wrap"><img src="assets/screens/patient-services.png" alt=""></div>
+        <div class="lbl"><span data-lang="en">All services</span><span data-lang="ar">الخدمات</span></div>
+        <div class="desc"><span data-lang="en">Every patient feature in one place</span><span data-lang="ar">كل ميزات المريض في مكان واحد</span></div>
+      </div>
+      <div class="screen-thumb">
+        <div class="img-wrap"><img src="assets/screens/patient-emergency.png" alt=""></div>
+        <div class="lbl"><span data-lang="en">Emergency QR</span><span data-lang="ar">رمز الطوارئ</span></div>
+        <div class="desc"><span data-lang="en">Vital info, nearest hospital, ambulance</span><span data-lang="ar">معلوماتك الحيوية، أقرب مستشفى، إسعاف</span></div>
+      </div>
+      <div class="screen-thumb">
+        <div class="img-wrap"><img src="assets/screens/patient-encyclopedia.png" alt=""></div>
+        <div class="lbl"><span data-lang="en">Medical encyclopedia</span><span data-lang="ar">الموسوعة الطبية</span></div>
+        <div class="desc"><span data-lang="en">Symptoms, conditions, news, advice</span><span data-lang="ar">أعراض، أمراض، أخبار، نصائح</span></div>
+      </div>
+      <div class="screen-thumb">
+        <div class="img-wrap"><img src="assets/screens/patient-consult-detail.png" alt=""></div>
+        <div class="lbl"><span data-lang="en">Online consultations</span><span data-lang="ar">الاستشارات عبر الإنترنت</span></div>
+        <div class="desc"><span data-lang="en">Detailed cards with attached files</span><span data-lang="ar">بطاقات تفصيلية مع الملفات المرفقة</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. Medical Library
+     ============================================================ -->
+<section id="library" class="section mint" data-screen-label="06 Library">
+  <div class="container library">
+    <div class="copy">
+      <span class="eyebrow">
+        <span data-lang="en">Medical library</span><span data-lang="ar">المكتبة الطبية</span>
+      </span>
+      <h2>
+        <span data-lang="en">Trusted health information, in your language</span>
+        <span data-lang="ar">معلومات صحية موثوقة بلغتك</span>
+      </h2>
+      <p>
+        <span data-lang="en">SyrHealth ships with a continuously growing library of medical articles, condition guides, symptom explainers, health advice, and news — written and reviewed for clarity.</span>
+        <span data-lang="ar">يتضمّن SyrHealth مكتبة متنامية من المقالات الطبية وأدلة الأمراض وشرح الأعراض ونصائح صحية وأخبار، مكتوبة ومراجعة بأسلوب واضح.</span>
+      </p>
+      <div class="disclaimer">
+        <strong><span data-lang="en">Important</span><span data-lang="ar">تنبيه مهم</span>:</strong>
+        <span data-lang="en"> the medical content is for awareness only and does not replace a consultation with a licensed doctor.</span>
+        <span data-lang="ar"> هذه المعلومات للتوعية فقط ولا تُغني عن استشارة طبيب مرخّص.</span>
+      </div>
+    </div>
+    <div class="article-stack">
+      <div class="article-card">
+        <span class="ic" data-icon="heart"></span>
+        <div>
+          <div class="meta"><span data-lang="en">CARDIOLOGY</span><span data-lang="ar">أمراض القلب</span></div>
+          <h4><span data-lang="en">Reading your blood pressure numbers</span><span data-lang="ar">كيف تقرأ أرقام ضغط دمك بنفسك</span></h4>
+          <p><span data-lang="en">What 140/90 actually means, and when to call your doctor.</span><span data-lang="ar">ماذا يعني الرقم 140/90 فعلاً، ومتى يجب التواصل مع طبيبك.</span></p>
+        </div>
+      </div>
+      <div class="article-card">
+        <span class="ic" data-icon="pill"></span>
+        <div>
+          <div class="meta"><span data-lang="en">MEDICATIONS</span><span data-lang="ar">الأدوية</span></div>
+          <h4><span data-lang="en">Don't stop a chronic medication on your own</span><span data-lang="ar">لا تتوقف عن دواء مزمن من تلقاء نفسك</span></h4>
+          <p><span data-lang="en">Why tapering and consulting your doctor matters before changes.</span><span data-lang="ar">لماذا يجب استشارة الطبيب قبل أي تغيير في جرعتك.</span></p>
+        </div>
+      </div>
+      <div class="article-card">
+        <span class="ic" data-icon="stethoscope"></span>
+        <div>
+          <div class="meta"><span data-lang="en">PEDIATRICS</span><span data-lang="ar">طب الأطفال</span></div>
+          <h4><span data-lang="en">Sore throat in children — when it's viral, when it's not</span><span data-lang="ar">التهاب الحلق عند الأطفال — متى يكون فيروسياً</span></h4>
+          <p><span data-lang="en">A practical guide for parents, with red flags to watch.</span><span data-lang="ar">دليل عملي للأهل مع علامات التحذير الواجب مراقبتها.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. Trust & Privacy
+     ============================================================ -->
+<section id="trust" class="section" data-screen-label="07 Trust">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">
+        <span data-lang="en">Trust</span><span data-lang="ar">الثقة</span>
+      </span>
+      <h2>
+        <span data-lang="en">Trust is the foundation of digital healthcare</span>
+        <span data-lang="ar">الثقة أساس الرعاية الصحية الرقمية</span>
+      </h2>
+      <p>
+        <span data-lang="en">At SyrHealth we put patient privacy and data safety first. The platform is designed to make communication between patients and doctors easier, and to organize medical records, appointments, consultations, electronic prescriptions, and lab and imaging orders in a safe and structured way.</span>
+        <span data-lang="ar">في SyrHealth، نضع خصوصية المريض وسلامة بياناته في مقدمة كل خطوة. صُمّمت المنصة لتسهيل التواصل بين المرضى والأطباء، وتنظيم السجلات الطبية، المواعيد، الاستشارات، الوصفات الإلكترونية، وطلبات التحاليل والأشعة بطريقة آمنة ومنظمة.</span>
+      </p>
+    </div>
+
+    <div class="disclaimer" style="max-width: 820px; margin: 0 auto 40px; text-align: right;">
+      <strong><span data-lang="en">Important note</span><span data-lang="ar">ملاحظة مهمة</span>:</strong>
+      <span data-lang="en"> SyrHealth does not replace the doctor and does not provide an independent medical diagnosis. It provides a technical environment that helps patients and doctors organize healthcare and communicate more clearly and easily.</span>
+      <span data-lang="ar"> لا تستبدل SyrHealth الطبيب ولا تقدم تشخيصاً طبياً مستقلاً، بل توفر بيئة تقنية تساعد المرضى والأطباء على تنظيم الرعاية الصحية والتواصل بطريقة أكثر وضوحاً وسهولة.</span>
+    </div>
+
+    <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr);">
+      <div class="trust-card">
+        <span class="ic" data-icon="lock" data-size="18"></span>
+        <div>
+          <h3><span data-lang="en">Health-data protection</span><span data-lang="ar">حماية البيانات الصحية</span></h3>
+          <p><span data-lang="en">The platform treats health data as sensitive data that requires protection and clear access permissions.</span><span data-lang="ar">تتعامل المنصة مع البيانات الصحية باعتبارها بيانات حساسة تتطلب حماية وصلاحيات وصول واضحة.</span></p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <span class="ic" data-icon="check_badge" data-size="18"></span>
+        <div>
+          <h3><span data-lang="en">Access permissions</span><span data-lang="ar">صلاحيات الوصول</span></h3>
+          <p><span data-lang="en">A medical record can only be accessed by authorized users and within the appropriate permissions.</span><span data-lang="ar">لا يتم الوصول إلى السجل الطبي إلا من خلال المستخدمين المخولين وضمن الصلاحيات المناسبة.</span></p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <span class="ic" data-icon="eye" data-size="18"></span>
+        <div>
+          <h3><span data-lang="en">Transparency</span><span data-lang="ar">الشفافية</span></h3>
+          <p><span data-lang="en">Sensitive access operations to medical records and files may be logged to support security and compliance.</span><span data-lang="ar">قد يتم تسجيل عمليات الوصول الحساسة إلى السجلات الطبية والملفات لدعم الأمان والامتثال.</span></p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <span class="ic" data-icon="stethoscope" data-size="18"></span>
+        <div>
+          <h3><span data-lang="en">The platform's role</span><span data-lang="ar">دور المنصة</span></h3>
+          <p><span data-lang="en">SyrHealth provides the technical infrastructure to organize the service, while the medical decision remains the responsibility of the treating doctor.</span><span data-lang="ar">SyrHealth توفر البنية التقنية لتنظيم الخدمة، بينما يبقى القرار الطبي مسؤولية الطبيب المعالج.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 32px;">
+      <a href="privacy.html" class="btn outline"><span data-lang="en">Privacy policy</span><span data-lang="ar">سياسة الخصوصية</span></a>
+      <a href="terms.html" class="btn outline"><span data-lang="en">Terms of use</span><span data-lang="ar">شروط الاستخدام</span></a>
+      <a href="data-protection.html" class="btn outline"><span data-lang="en">Data protection</span><span data-lang="ar">حماية البيانات</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     8. How It Works
+     ============================================================ -->
+<section id="how" class="section muted" data-screen-label="08 How it works">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">
+        <span data-lang="en">How it works</span><span data-lang="ar">كيف تعمل المنصة</span>
+      </span>
+      <h2>
+        <span data-lang="en">Three steps for patients, three steps for doctors</span>
+        <span data-lang="ar">ثلاث خطوات للمريض، ثلاث للطبيب</span>
+      </h2>
+    </div>
+    <div class="steps-wrap">
+      <div class="steps-col">
+        <h3>
+          <span class="badge" data-icon="user_plus" data-size="14"></span>
+          <span data-lang="en">For patients</span><span data-lang="ar">للمرضى</span>
+        </h3>
+        <div class="steps">
+          <div class="step">
+            <div>
+              <h4><span data-lang="en">Create your account</span><span data-lang="ar">أنشئ حسابك</span></h4>
+              <p><span data-lang="en">Sign up with email or phone — or claim a profile created by your clinic.</span><span data-lang="ar">سجّل بالبريد أو الهاتف، أو استلم ملفاً أنشأه المركز الطبي.</span></p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h4><span data-lang="en">Find your doctor or service</span><span data-lang="ar">ابحث عن طبيبك أو الخدمة</span></h4>
+              <p><span data-lang="en">Search by specialty, location, language, or service type.</span><span data-lang="ar">ابحث حسب التخصص أو الموقع أو اللغة أو نوع الخدمة.</span></p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h4><span data-lang="en">Manage your healthcare journey</span><span data-lang="ar">أدِر رحلتك الصحية</span></h4>
+              <p><span data-lang="en">Book, consult, track medications, and keep every record in one place.</span><span data-lang="ar">احجز، استشِر، تابع أدويتك، واحتفظ بكل شيء في مكان واحد.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="steps-col">
+        <h3>
+          <span class="badge" data-icon="stethoscope" data-size="14"></span>
+          <span data-lang="en">For doctors</span><span data-lang="ar">للأطباء</span>
+        </h3>
+        <div class="steps">
+          <div class="step">
+            <div>
+              <h4><span data-lang="en">Register</span><span data-lang="ar">سجّل حسابك</span></h4>
+              <p><span data-lang="en">Submit credentials and specialty information for review.</span><span data-lang="ar">أرسل وثائقك ومعلومات تخصصك للمراجعة.</span></p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h4><span data-lang="en">Get verified and approved</span><span data-lang="ar">احصل على التوثيق والاعتماد</span></h4>
+              <p><span data-lang="en">Our team verifies your credentials before activation.</span><span data-lang="ar">يقوم فريقنا بالتحقق من وثائقك قبل تفعيل حسابك.</span></p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h4><span data-lang="en">Start practicing on SyrHealth</span><span data-lang="ar">ابدأ ممارستك على SyrHealth</span></h4>
+              <p><span data-lang="en">Manage patients, appointments, prescriptions, and orders.</span><span data-lang="ar">أدِر المرضى والمواعيد والوصفات والأوامر الطبية.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- App Preview section removed — coverage now lives in the For Doctors and For Patients showcases above. -->
+
+<!-- ============================================================
+     9.5 Latest news
+     ============================================================ -->
+<section id="news" class="section" data-screen-label="095 News">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><span data-lang="en">Latest news</span><span data-lang="ar">آخر الأخبار</span></span>
+      <h2><span data-lang="en">Latest news</span><span data-lang="ar">آخر الأخبار</span></h2>
+      <p>
+        <span data-lang="en">Follow the latest health news and updates from SyrHealth.</span>
+        <span data-lang="ar">تابع آخر التحديثات والأخبار الصحية من SyrHealth.</span>
+      </p>
+    </div>
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="img"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></svg></div>
+        <div class="body">
+          <div class="meta"><span data-lang="en">CARDIOLOGY</span><span data-lang="ar">صحة القلب</span><span class="dot">·</span><span>20 ديسمبر 2025</span></div>
+          <h3><span data-lang="en">Tips to keep your heart healthy</span><span data-lang="ar">نصائح للحفاظ على صحة القلب</span></h3>
+          <p><span data-lang="en">A short summary on the importance of periodic follow-up and a healthy lifestyle.</span><span data-lang="ar">ملخص قصير عن أهمية المتابعة الدورية ونمط الحياة الصحي.</span></p>
+          <a class="read-more" href="news.html"><span data-lang="en">Read more</span><span data-lang="ar">قراءة المزيد</span> ›</a>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="img"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 14h8M8 18h6"/></svg></div>
+        <div class="body">
+          <div class="meta"><span data-lang="en">DIGITAL HEALTH</span><span data-lang="ar">الصحة الرقمية</span><span class="dot">·</span><span>15 ديسمبر 2025</span></div>
+          <h3><span data-lang="en">How digital medical records improve care</span><span data-lang="ar">كيف تساعد السجلات الطبية الرقمية في تحسين الرعاية؟</span></h3>
+          <p><span data-lang="en">A short summary on the role of digital records in tracking health status.</span><span data-lang="ar">ملخص قصير عن دور السجلات الرقمية في تسهيل متابعة الحالة الصحية.</span></p>
+          <a class="read-more" href="news.html"><span data-lang="en">Read more</span><span data-lang="ar">قراءة المزيد</span> ›</a>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="img"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l-1 6h-4Z"/><path d="M7 9h10v9a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2Z"/></svg></div>
+        <div class="body">
+          <div class="meta"><span data-lang="en">PREVENTION</span><span data-lang="ar">الوقاية</span><span class="dot">·</span><span>10 ديسمبر 2025</span></div>
+          <h3><span data-lang="en">The importance of periodic lab tests</span><span data-lang="ar">أهمية التحاليل الدورية في الكشف المبكر</span></h3>
+          <p><span data-lang="en">A short summary on the role of medical tests in prevention and follow-up.</span><span data-lang="ar">ملخص قصير عن دور التحاليل الطبية في الوقاية والمتابعة.</span></p>
+          <a class="read-more" href="news.html"><span data-lang="en">Read more</span><span data-lang="ar">قراءة المزيد</span> ›</a>
+        </div>
+      </article>
+    </div>
+    <div style="text-align:center; margin-top: 32px;">
+      <a href="news.html" class="btn outline"><span data-lang="en">View all news</span><span data-lang="ar">عرض كل الأخبار</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     10. FAQ
+     ============================================================ -->
+<section id="faq" class="section muted" data-screen-label="10 FAQ">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><span data-lang="en">FAQ</span><span data-lang="ar">الأسئلة الشائعة</span></span>
+      <h2><span data-lang="en">Frequently asked questions</span><span data-lang="ar">الأسئلة الأكثر شيوعاً</span></h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item">
+        <summary><span data-lang="en">What is SyrHealth?</span><span data-lang="ar">ما هي SyrHealth؟</span></summary>
+        <p>
+          <span data-lang="en">SyrHealth is a digital health platform that helps patients and doctors organize appointments, consultations, medical records, electronic prescriptions, and lab/imaging orders within a structured technical environment.</span>
+          <span data-lang="ar">SyrHealth منصة صحية رقمية تساعد المرضى والأطباء على تنظيم المواعيد، الاستشارات، السجلات الطبية، الوصفات الإلكترونية، وطلبات التحاليل والأشعة ضمن بيئة تقنية منظمة.</span>
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-lang="en">Does SyrHealth provide medical diagnosis?</span><span data-lang="ar">هل تقدم SyrHealth تشخيصاً طبياً؟</span></summary>
+        <p>
+          <span data-lang="en">No. The platform does not replace the doctor and does not provide an independent diagnosis. Medical decisions, diagnosis, and treatment are the responsibility of the treating doctor, while the platform provides the technical infrastructure for communication and service organization.</span>
+          <span data-lang="ar">لا. المنصة لا تستبدل الطبيب ولا تقدم تشخيصاً مستقلاً. القرار الطبي والتشخيص والعلاج مسؤولية الطبيب المعالج، بينما توفر المنصة البنية التقنية للتواصل وتنظيم الخدمة.</span>
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-lang="en">Is my health data safe?</span><span data-lang="ar">هل بياناتي الصحية آمنة؟</span></summary>
+        <p>
+          <span data-lang="en">SyrHealth treats health data as sensitive data, and uses access permissions, sensitive-operation logging, and security measures to protect medical records and attachments.</span>
+          <span data-lang="ar">تتعامل SyrHealth مع البيانات الصحية كبيانات حساسة، وتستخدم صلاحيات وصول، تسجيل عمليات حساسة، وإجراءات أمان لحماية السجلات والمرفقات الطبية.</span>
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-lang="en">Who can access my medical record?</span><span data-lang="ar">من يستطيع الوصول إلى سجلي الطبي؟</span></summary>
+        <p>
+          <span data-lang="en">Only authorized users can access medical records — such as the treating doctor or service-related parties — according to permissions and approvals within the platform.</span>
+          <span data-lang="ar">يمكن للمستخدمين المخولين فقط الوصول إلى السجلات الطبية، مثل الطبيب المعالج أو الجهات المرتبطة بالخدمة، وبحسب الصلاحيات والموافقات داخل المنصة.</span>
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-lang="en">Is access to my medical record logged?</span><span data-lang="ar">هل يتم تسجيل من يفتح سجلي الطبي؟</span></summary>
+        <p>
+          <span data-lang="en">Sensitive access operations to medical records, files, or legal approvals may be logged for security, transparency, and compliance purposes.</span>
+          <span data-lang="ar">قد يتم تسجيل عمليات الوصول الحساسة إلى السجلات الطبية أو الملفات أو الموافقات القانونية لأغراض الأمان والشفافية والامتثال.</span>
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-lang="en">Can I delete my account?</span><span data-lang="ar">هل يمكنني حذف حسابي؟</span></summary>
+        <p>
+          <span data-lang="en">You can request account deletion, but some medical records, audit logs, or required data may be retained for legal, regulatory, or security reasons.</span>
+          <span data-lang="ar">يمكن للمستخدم طلب حذف الحساب، لكن قد يتم الاحتفاظ ببعض السجلات الطبية أو سجلات التدقيق أو البيانات اللازمة لأسباب قانونية أو تنظيمية أو أمنية.</span>
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-lang="en">Does an online consultation replace a clinic visit?</span><span data-lang="ar">هل الاستشارة عن بعد تغني عن زيارة الطبيب؟</span></summary>
+        <p>
+          <span data-lang="en">Not always. Online consultations may help with guidance and follow-up, but the doctor may request a direct examination or a clinic visit. In emergencies you must go to the nearest hospital immediately.</span>
+          <span data-lang="ar">ليس دائماً. الاستشارة عن بعد قد تساعد في التوجيه والمتابعة، لكن الطبيب قد يطلب فحصاً مباشراً أو زيارة العيادة. في حالات الطوارئ يجب التوجه فوراً إلى أقرب مستشفى.</span>
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-lang="en">Can I download my prescription?</span><span data-lang="ar">هل يمكنني تنزيل وصفتي الطبية؟</span></summary>
+        <p>
+          <span data-lang="en">Electronic prescriptions can be viewed or downloaded based on the permissions available within the platform, after the doctor issues them.</span>
+          <span data-lang="ar">يمكن عرض أو تنزيل الوصفة الإلكترونية حسب الصلاحيات المتاحة داخل المنصة، وبعد إصدارها من الطبيب.</span>
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-lang="en">Is my data shared with third parties?</span><span data-lang="ar">هل يتم مشاركة بياناتي مع جهات خارجية؟</span></summary>
+        <p>
+          <span data-lang="en">Data is shared only when needed to deliver the medical service or operate the service, according to authorized permissions and approvals. Data is not sold to advertisers.</span>
+          <span data-lang="ar">لا تتم مشاركة البيانات إلا عند الحاجة لتقديم الخدمة الطبية أو تشغيل الخدمة، وبحسب الصلاحيات والموافقات المعتمدة. لا يتم بيع البيانات للمعلنين.</span>
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-lang="en">Is the site intended for emergency cases?</span><span data-lang="ar">هل الموقع مخصص للحالات الطارئة؟</span></summary>
+        <p>
+          <span data-lang="en">No. SyrHealth is not a substitute for ambulance or emergency services. In emergencies you must call the ambulance or go directly to the nearest hospital.</span>
+          <span data-lang="ar">لا. SyrHealth ليست بديلاً عن الإسعاف أو خدمات الطوارئ. في الحالات الطارئة يجب الاتصال بالإسعاف أو التوجه مباشرة إلى أقرب مستشفى.</span>
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-lang="en">Is the medical content on the site enough for treatment?</span><span data-lang="ar">هل المعلومات الطبية في الموقع كافية للعلاج؟</span></summary>
+        <p>
+          <span data-lang="en">No. Any awareness-oriented medical content within the site does not replace consulting a doctor and should not be used as a substitute for diagnosis or medical treatment.</span>
+          <span data-lang="ar">لا. أي محتوى طبي توعوي داخل الموقع لا يغني عن مراجعة الطبيب ولا يجب استخدامه كبديل عن التشخيص أو العلاج الطبي.</span>
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     11. Final CTA — Join us
+     ============================================================ -->
+<section id="download" class="section" data-screen-label="11 CTA">
+  <div class="container">
+    <div class="cta-band">
+      <h2>
+        <span data-lang="en">Start your healthcare journey with SyrHealth</span>
+        <span data-lang="ar">ابدأ رحلتك الصحية مع SyrHealth</span>
+      </h2>
+      <p>
+        <span data-lang="en">Download the patient app today, or join as a doctor and bring connected care to your patients.</span>
+        <span data-lang="ar">حمّل تطبيق المريض اليوم، أو انضم كطبيب لتقدّم رعاية متّصلة لمرضاك.</span>
+      </p>
+      <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center;">
+        <a class="btn primary lg" href="download.html">
+          <span data-icon="download" data-size="20"></span>
+          <span data-lang="en">Download app</span>
+          <span data-lang="ar">حمّل التطبيق</span>
+        </a>
+        <a class="btn outline lg" id="join" href="doctor-signup.html">
+          <span data-icon="stethoscope" data-size="20"></span>
+          <span data-lang="en">Join as doctor</span>
+          <span data-lang="ar">انضم كطبيب</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     12. Footer
+     ============================================================ -->
+<footer class="footer" data-screen-label="12 Footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/syr-health-logo.png" alt="SYR HEALTH">
+        <p>
+          <span data-lang="en">A connected healthcare platform — patient, doctor, and clinic in one journey.</span>
+          <span data-lang="ar">منصة رعاية صحية متّصلة — تجمع المريض والطبيب والعيادة في رحلة واحدة.</span>
+        </p>
+        <p style="margin-top: 8px;">
+          <span data-lang="en">Follow the latest SyrHealth news and health updates via our official channels.</span>
+          <span data-lang="ar">تابع آخر أخبار SyrHealth والتحديثات الصحية عبر قنواتنا الرسمية.</span>
+        </p>
+        <h4 style="margin-top: 16px; color:#fff;"><span data-lang="en">Follow us</span><span data-lang="ar">تابعنا على</span></h4>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2c-.2-1-1-1.7-1.9-2C18 4.8 12 4.8 12 4.8s-6 0-7.7.4c-.9.3-1.7 1-1.9 2C2 8.9 2 12 2 12s0 3.1.4 4.8c.2 1 1 1.7 1.9 2 1.7.4 7.7.4 7.7.4s6 0 7.7-.4c.9-.3 1.7-1 1.9-2 .4-1.7.4-4.8.4-4.8s0-3.1-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A10.4 10.4 0 0012 1C6.2 1 1.5 5.7 1.5 11.5c0 2 .5 4 1.6 5.7L1.5 23l6-1.6c1.7.9 3.6 1.4 5.5 1.4 5.8 0 10.5-4.7 10.5-10.5 0-2.8-1.1-5.4-3-7.3z"/></svg></a>
+          <a href="#" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 3 2 11.5l5.5 2L20 6l-8.5 9 .5 5 3-3 4.5 3.5L22 3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4><span data-lang="en">Platform</span><span data-lang="ar">المنصة</span></h4>
+        <ul class="footer-links">
+          <li><a href="#about"><span data-lang="en">About</span><span data-lang="ar">عن المنصة</span></a></li>
+          <li><a href="#patients"><span data-lang="en">For patients</span><span data-lang="ar">للمرضى</span></a></li>
+          <li><a href="#doctors"><span data-lang="en">For doctors</span><span data-lang="ar">للأطباء</span></a></li>
+          <li><a href="#library"><span data-lang="en">Medical library</span><span data-lang="ar">المكتبة الطبية</span></a></li>
+          <li><a href="news.html"><span data-lang="en">Latest news</span><span data-lang="ar">آخر الأخبار</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span data-lang="en">Trust</span><span data-lang="ar">الثقة</span></h4>
+        <ul class="footer-links">
+          <li><a href="#trust"><span data-lang="en">Trust</span><span data-lang="ar">الثقة</span></a></li>
+          <li><a href="privacy.html"><span data-lang="en">Privacy policy</span><span data-lang="ar">سياسة الخصوصية</span></a></li>
+          <li><a href="terms.html"><span data-lang="en">Terms of use</span><span data-lang="ar">شروط الاستخدام</span></a></li>
+          <li><a href="data-protection.html"><span data-lang="en">Data protection</span><span data-lang="ar">حماية البيانات</span></a></li>
+          <li><a href="#faq"><span data-lang="en">FAQ</span><span data-lang="ar">الأسئلة الشائعة</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span data-lang="en">Get the app</span><span data-lang="ar">التطبيق</span></h4>
+        <ul class="footer-links">
+          <li><a href="download.html"><span data-lang="en">iOS</span><span data-lang="ar">iOS</span></a></li>
+          <li><a href="download.html"><span data-lang="en">Android</span><span data-lang="ar">Android</span></a></li>
+          <li><a href="doctor-signup.html"><span data-lang="en">Join as doctor</span><span data-lang="ar">انضم كطبيب</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></h4>
+        <ul class="footer-links">
+          <li><a href="contact.html"><span data-lang="en">Contact page</span><span data-lang="ar">صفحة التواصل</span></a></li>
+          <li><a href="mailto:hello@syrhealth.app">hello@syrhealth.app</a></li>
+          <li><a href="mailto:support@syrhealth.app"><span data-lang="en">Support</span><span data-lang="ar">الدعم</span></a></li>
+          <li><a href="mailto:partners@syrhealth.app"><span data-lang="en">Partners</span><span data-lang="ar">الشراكات</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> SyrHealth. <span data-lang="en">All rights reserved.</span><span data-lang="ar">جميع الحقوق محفوظة.</span></span>
+      <span>
+        <a href="privacy.html" style="color:inherit; text-decoration:none; margin-inline-end:14px;"><span data-lang="en">Privacy</span><span data-lang="ar">الخصوصية</span></a>
+        <a href="terms.html" style="color:inherit; text-decoration:none;"><span data-lang="en">Terms</span><span data-lang="ar">الشروط</span></a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // Mobile nav toggle
+  const burger = document.getElementById("nav-burger-btn");
+  const mobileNav = document.getElementById("mobile-nav");
+  const closeBtn = document.getElementById("mobile-nav-close");
+  burger?.addEventListener("click", () => mobileNav.classList.add("open"));
+  closeBtn?.addEventListener("click", () => mobileNav.classList.remove("open"));
+  mobileNav?.addEventListener("click", (e) => { if (e.target === mobileNav) mobileNav.classList.remove("open"); });
+  mobileNav?.querySelectorAll("a").forEach(a => a.addEventListener("click", () => mobileNav.classList.remove("open")));
+</script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

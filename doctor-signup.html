@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>إنشاء حساب طبيب — SyrHealth</title>
+<meta name="description" content="انضم إلى منصة SyrHealth كطبيب. أدخل بياناتك المهنية لمراجعة حسابك وتفعيله.">
+<link rel="stylesheet" href="forms.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html#top" class="nav-logo" aria-label="SyrHealth"><img src="assets/syr-health-logo.png" alt="SYR HEALTH"></a>
+        <nav class="nav-links">
+      <a href="index.html#about"   data-lang="en">Platform</a>         <a href="index.html#about"   data-lang="ar">عن المنصة</a>
+      <a href="index.html#patients" data-lang="en">For patients</a>   <a href="index.html#patients" data-lang="ar">للمرضى</a>
+      <a href="index.html#doctors"  data-lang="en">For doctors</a>    <a href="index.html#doctors"  data-lang="ar">للأطباء</a>
+      <a href="index.html#library"  data-lang="en">Medical library</a><a href="index.html#library"  data-lang="ar">المكتبة الطبية</a>
+      <a href="news.html"           data-lang="en">Health news</a>    <a href="news.html"           data-lang="ar">الأخبار الصحية</a>
+      <a href="index.html#faq"      data-lang="en">FAQ</a>            <a href="index.html#faq"      data-lang="ar">الأسئلة الشائعة</a>
+      <a href="contact.html"        data-lang="en">Contact us</a>     <a href="contact.html"        data-lang="ar">تواصل معنا</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="download.html" class="btn primary"><span data-lang="en">Download app</span><span data-lang="ar">حمّل التطبيق</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="form-hero">
+  <div class="container">
+    <span class="breadcrumb">
+      <a href="index.html"><span data-lang="en">Home</span><span data-lang="ar">الرئيسية</span></a>
+      <span class="sep">›</span>
+      <span><span data-lang="en">Doctor signup</span><span data-lang="ar">إنشاء حساب طبيب</span></span>
+    </span>
+    <h1><span data-lang="en">Create a doctor account</span><span data-lang="ar">إنشاء حساب طبيب</span></h1>
+    <p>
+      <span data-lang="en">Enter your professional details to create a doctor account. The account will be reviewed by administration before you can be discovered by patients and receive appointments.</span>
+      <span data-lang="ar">أدخل بياناتك المهنية لإنشاء حساب طبيب. سيتم مراجعة الحساب من قبل الإدارة قبل تفعيل ظهورك للمرضى واستقبال المواعيد.</span>
+    </p>
+  </div>
+</section>
+
+<section class="form-body">
+  <div class="container">
+
+    <div class="notice info">
+      <span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg></span>
+      <span>
+        <span data-lang="en">After completing registration and verification, your information will be reviewed by administration. You will not be able to receive appointments or appear in search until your account is approved.</span>
+        <span data-lang="ar">بعد إتمام التسجيل والتحقق من الحساب، سيتم مراجعة بياناتك من قبل الإدارة. لن تتمكن من استقبال المواعيد أو الظهور في البحث حتى تتم الموافقة على حسابك.</span>
+      </span>
+    </div>
+
+    <div class="step-rail">
+      <span class="step-pill"><span class="num">1</span><span data-lang="en">Account &amp; personal</span><span data-lang="ar">الحساب والبيانات الشخصية</span></span>
+      <span class="step-pill"><span class="num">2</span><span data-lang="en">Professional &amp; clinic</span><span data-lang="ar">المعلومات المهنية والعيادة</span></span>
+      <span class="step-pill"><span class="num">3</span><span data-lang="en">Consultation &amp; consent</span><span data-lang="ar">نوع الاستشارة والموافقة</span></span>
+    </div>
+
+    <form id="doctor-form" novalidate>
+
+      <!-- ===== Section 1: Account ===== -->
+      <div class="form-card">
+        <div class="step-label"><span data-lang="en">Section 1</span><span data-lang="ar">القسم 1</span></div>
+        <h2><span data-lang="en">Account information</span><span data-lang="ar">معلومات الحساب</span></h2>
+        <p class="help"><span data-lang="en">Your login credentials and verification preferences.</span><span data-lang="ar">بيانات تسجيل الدخول وتفضيلات التحقق.</span></p>
+
+        <div class="form-grid">
+          <div class="f-field full">
+            <label class="lbl"><span data-lang="en">Full name</span><span data-lang="ar">الاسم الكامل</span><span class="req">*</span></label>
+            <input name="fullName" type="text" placeholder="د. محمد أحمد" required data-validate="required">
+            <div class="err"><span data-lang="en">This field is required.</span><span data-lang="ar">هذا الحقل مطلوب.</span></div>
+          </div>
+          <div class="f-field">
+            <label class="lbl"><span data-lang="en">Email</span><span data-lang="ar">البريد الإلكتروني</span><span class="req">*</span></label>
+            <input name="email" type="email" placeholder="doctor@example.com" required data-validate="email">
+            <div class="err"><span data-lang="en">Please enter a valid email.</span><span data-lang="ar">البريد الإلكتروني غير صحيح.</span></div>
+          </div>
+          <div class="f-field">
+            <label class="lbl"><span data-lang="en">Phone</span><span data-lang="ar">رقم الهاتف</span><span class="req">*</span></label>
+            <input name="phone" type="tel" placeholder="+963 9XX XXX XXX" required data-validate="phone">
+            <div class="err"><span data-lang="en">Please enter a valid phone number.</span><span data-lang="ar">رقم الهاتف غير صحيح.</span></div>
+          </div>
+          <div class="f-field">
+            <label class="lbl"><span data-lang="en">Password</span><span data-lang="ar">كلمة المرور</span><span class="req">*</span></label>
+            <input name="password" type="password" required data-validate="password">
+            <div class="hint"><span data-lang="en">At least 6 characters.</span><span data-lang="ar">يجب أن تحتوي كلمة المرور على 6 أحرف على الأقل.</span></div>
+            <div class="err"><span data-lang="en">Password is too short.</span><span data-lang="ar">كلمة المرور قصيرة جداً.</span></div>
+          </div>
+          <div class="f-field">
+            <label class="lbl"><span data-lang="en">Confirm password</span><span data-lang="ar">تأكيد كلمة المرور</span><span class="req">*</span></label>
+            <input name="passwordConfirm" type="password" required data-validate="match" data-match="password">
+            <div class="err"><span data-lang="en">Passwords do not match.</span><span data-lang="ar">كلمتا المرور غير متطابقتين.</span></div>
+          </div>
+          <div class="f-field full">
+            <label class="lbl"><span data-lang="en">Verification channel</span><span data-lang="ar">طريقة إرسال رمز التحقق</span><span class="req">*</span></label>
+            <div class="seg-radio">
+              <input id="ch-email" type="radio" name="channel" value="email" checked>
+              <label for="ch-email"><span data-lang="en">Email</span><span data-lang="ar">البريد الإلكتروني</span></label>
+              <input id="ch-wa" type="radio" name="channel" value="whatsapp">
+              <label for="ch-wa"><span data-lang="en">WhatsApp</span><span data-lang="ar">واتساب</span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Section 2: Personal ===== -->
+      <div class="form-card">
+        <div class="step-label"><span data-lang="en">Section 2</span><span data-lang="ar">القسم 2</span></div>
+        <h2><span data-lang="en">Personal information</span><span data-lang="ar">المعلومات الشخصية</span></h2>
+
+        <div class="form-grid">
+          <div class="f-field">
+            <label class="lbl"><span data-lang="en">Gender</span><span data-lang="ar">الجنس</span><span class="req">*</span></label>
+            <div class="seg-radio">
+              <input id="g-m" type="radio" name="gender" value="Male" required>
+              <label for="g-m"><span data-lang="en">Male</span><span data-lang="ar">ذكر</span></label>
+              <input id="g-f" type="radio" name="gender" value="Female">
+              <label for="g-f"><span data-lang="en">Female</span><span data-lang="ar">أنثى</span></label>
+            </div>
+            <div class="err"><span data-lang="en">This field is required.</span><span data-lang="ar">هذا الحقل مطلوب.</span></div>
+          </div>
+          <div class="f-field">
+            <label class="lbl"><span data-lang="en">Date of birth</span><span data-lang="ar">تاريخ الميلاد</span><span class="req">*</span></label>
+            <input name="dateOfBirth" type="date" required data-validate="required">
+            <div class="err"><span data-lang="en">This field is required.</span><span data-lang="ar">هذا الحقل مطلوب.</span></div>
+          </div>
+          <div class="f-field full">
+            <label class="lbl"><span data-lang="en">Address</span><span data-lang="ar">العنوان</span><span class="req">*</span></label>
+            <input name="address" type="text" placeholder="المدينة / المنطقة / العنوان" required data-validate="required">
+            <div class="err"><span data-lang="en">This field is required.</span><span data-lang="ar">هذا الحقل مطلوب.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Section 3: Professional ===== -->
+      <div class="form-card">
+        <div class="step-label"><span data-lang="en">Section 3</span><span data-lang="ar">القسم 3</span></div>
+        <h2><span data-lang="en">Professional information</span><span data-lang="ar">المعلومات المهنية</span></h2>
+
+        <div class="form-grid">
+          <div class="f-field">
+            <label class="lbl"><span data-lang="en">Specialization</span><span data-lang="ar">التخصص</span><span class="req">*</span></label>
+            <select name="specializationKey" id="spec-select" required data-validate="required">
+              <option value="">— <span data-lang="en">Choose</span>اختيار التخصص —</option>
+              <option value="general">طب عام</option>
+              <option value="cardiology">طب القلب</option>
+              <option value="pediatrics">طب الأطفال</option>
+              <option value="dermatology">الجلدية</option>
+              <option value="orthopedics">العظمية</option>
+              <option value="neurology">طب الأعصاب</option>
+              <option value="ophthalmology">طب العيون</option>
+              <option value="dentistry">طب الأسنان</option>
+              <option value="psychiatry">الطب النفسي</option>
+              <option value="ent">الأنف والأذن والحنجرة</option>
+              <option value="urology">المسالك البولية</option>
+              <option value="gynecology">طب النساء والتوليد</option>
+              <option value="other">تخصص آخر</option>
+            </select>
+            <div class="err"><span data-lang="en">This field is required.</span><span data-lang="ar">هذا الحقل مطلوب.</span></div>
+          </div>
+          <div class="f-field" id="custom-spec-field" style="display:none;">
+            <label class="lbl"><span data-lang="en">Write your specialization</span><span data-lang="ar">اكتب التخصص</span><span class="req">*</span></label>
+            <input name="customSpecializationText" type="text" placeholder="اكتب التخصص">
+          </div>
+          <div class="f-field full">
+            <label class="lbl"><span data-lang="en">Medical license number</span><span data-lang="ar">رقم الترخيص الطبي</span><span class="req">*</span></label>
+            <input name="medicalLicenseNumber" type="text" placeholder="MED-12345" required data-validate="required">
+            <div class="err"><span data-lang="en">Medical license number is required.</span><span data-lang="ar">رقم الترخيص الطبي مطلوب.</span></div>
+          </div>
+          <div class="f-field full">
+            <label class="lbl"><span data-lang="en">Professional bio</span><span data-lang="ar">النبذة المهنية</span><span class="req">*</span></label>
+            <textarea name="bio" placeholder="اكتب نبذة قصيرة عن خبرتك الطبية." required data-validate="required"></textarea>
+            <div class="err"><span data-lang="en">This field is required.</span><span data-lang="ar">هذا الحقل مطلوب.</span></div>
+          </div>
+          <div class="f-field full">
+            <label class="lbl"><span data-lang="en">Education / Degree</span><span data-lang="ar">المؤهل العلمي</span><span class="req">*</span></label>
+            <input name="education" type="text" placeholder="جامعة دمشق، اختصاص..." required data-validate="required">
+            <div class="err"><span data-lang="en">This field is required.</span><span data-lang="ar">هذا الحقل مطلوب.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Section 4: Clinic ===== -->
+      <div class="form-card">
+        <div class="step-label"><span data-lang="en">Section 4</span><span data-lang="ar">القسم 4</span></div>
+        <h2><span data-lang="en">Clinic information</span><span data-lang="ar">بيانات العيادة</span></h2>
+
+        <div class="form-grid">
+          <div class="f-field full">
+            <label class="lbl"><span data-lang="en">Clinic address</span><span data-lang="ar">عنوان العيادة</span><span class="req">*</span></label>
+            <input name="clinicAddress" type="text" placeholder="العنوان التفصيلي للعيادة" required data-validate="required">
+            <div class="err"><span data-lang="en">This field is required.</span><span data-lang="ar">هذا الحقل مطلوب.</span></div>
+          </div>
+          <div class="f-field">
+            <label class="lbl"><span data-lang="en">City</span><span data-lang="ar">المدينة</span></label>
+            <input name="locationCity" type="text" placeholder="دمشق">
+          </div>
+          <div class="f-field">
+            <label class="lbl"><span data-lang="en">Country</span><span data-lang="ar">الدولة</span></label>
+            <input name="locationCountry" type="text" placeholder="سوريا" value="سوريا">
+          </div>
+          <div class="f-field full">
+            <label class="lbl"><span data-lang="en">Clinic location on the map</span><span data-lang="ar">موقع العيادة على الخريطة</span></label>
+            <button type="button" class="btn outline" onclick="alert('سيتم فتح الخريطة لتحديد موقع العيادة.')">
+              <span data-icon-pin>📍</span>
+              <span data-lang="en">Pick location on map</span>
+              <span data-lang="ar">تحديد الموقع على الخريطة</span>
+            </button>
+            <div class="map-placeholder">
+              <span data-lang="en">Map will appear here. The clinic location will be verified by administration upon account review.</span>
+              <span data-lang="ar">سيتم التحقق من موقع العيادة من قبل الإدارة عند مراجعة الحساب.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Section 5: Consultation types ===== -->
+      <div class="form-card">
+        <div class="step-label"><span data-lang="en">Section 5</span><span data-lang="ar">القسم 5</span></div>
+        <h2><span data-lang="en">Consultation types</span><span data-lang="ar">أنواع الاستشارة</span></h2>
+        <p class="help"><span data-lang="en">Select all consultation types you offer.</span><span data-lang="ar">اختر أنواع الاستشارة المتاحة لديك.</span></p>
+
+        <div class="pick-cards">
+          <input id="ct-offline" type="checkbox" name="consultationTypes" value="offline" checked>
+          <label for="ct-offline">
+            <span class="ic-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></span>
+            <span>
+              <span class="lbl-title"><span data-lang="en">In-clinic consultation</span><span data-lang="ar">استشارة حضورية</span></span>
+              <span class="lbl-sub"><span data-lang="en">Patients visit your clinic in person.</span><span data-lang="ar">يحضر المرضى لعيادتك شخصياً.</span></span>
+            </span>
+          </label>
+          <input id="ct-online" type="checkbox" name="consultationTypes" value="online">
+          <label for="ct-online">
+            <span class="ic-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m22 8-6 4 6 4Z"/></svg></span>
+            <span>
+              <span class="lbl-title"><span data-lang="en">Online consultation</span><span data-lang="ar">استشارة أونلاين</span></span>
+              <span class="lbl-sub"><span data-lang="en">Video or chat consultations remotely.</span><span data-lang="ar">استشارات عبر الفيديو أو المحادثة عن بُعد.</span></span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- ===== Section 6: Consent ===== -->
+      <div class="form-card">
+        <div class="step-label"><span data-lang="en">Section 6</span><span data-lang="ar">القسم 6</span></div>
+        <h2><span data-lang="en">Legal consent</span><span data-lang="ar">الموافقة القانونية</span></h2>
+
+        <div class="f-check">
+          <input id="consent" type="checkbox" name="consent" required>
+          <label for="consent">
+            <span data-lang="en">I agree to the <a href="terms.html">terms of use</a>, <a href="privacy.html">privacy policy</a>, and the doctor agreement.</span>
+            <span data-lang="ar">أوافق على <a href="terms.html">شروط الاستخدام</a> و<a href="privacy.html">سياسة الخصوصية</a> واتفاقية الطبيب.</span>
+          </label>
+        </div>
+        <div class="f-field" data-consent-err style="margin-top: 8px;">
+          <div class="err" style="display:none;"><span data-lang="en">You must agree to the terms before creating your account.</span><span data-lang="ar">يجب الموافقة على الشروط قبل إنشاء الحساب.</span></div>
+        </div>
+      </div>
+
+      <div class="form-submit">
+        <a class="secondary-link" href="#">
+          <span data-lang="en">Already have an account? Sign in</span>
+          <span data-lang="ar">لديك حساب؟ تسجيل الدخول</span>
+        </a>
+        <button id="submit-btn" type="submit" class="btn primary lg">
+          <span data-lang="en" data-default-en>Create doctor account</span>
+          <span data-lang="ar" data-default-ar>إنشاء حساب طبيب</span>
+          <span data-loading style="display:none;">
+            <span data-lang="en">Creating account...</span>
+            <span data-lang="ar">جاري إنشاء الحساب...</span>
+          </span>
+        </button>
+      </div>
+    </form>
+
+    <!-- Success state -->
+    <div id="success" class="success-card" style="display:none; margin-top: 28px;">
+      <div class="check-wrap">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+      </div>
+      <h2><span data-lang="en">Account created</span><span data-lang="ar">تم إنشاء الحساب بنجاح</span></h2>
+      <p>
+        <span data-lang="en">A verification code has been sent to your chosen channel.</span>
+        <span data-lang="ar">تم إرسال رمز التحقق إلى وسيلة التواصل المختارة.</span>
+      </p>
+      <a class="btn primary" href="#"><span data-lang="en">Verify account</span><span data-lang="ar">التحقق من الحساب</span></a>
+      <p style="margin-top: 18px;">
+        <span data-lang="en">After verification, your account will be pending administration approval. You will not be able to receive appointments or appear in search until your account is approved.</span>
+        <span data-lang="ar">بعد التحقق، سيكون حسابك بانتظار مراجعة الإدارة. لن تتمكن من استقبال المواعيد أو الظهور في نتائج البحث حتى تتم الموافقة على حسابك.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/syr-health-logo.png" alt="SYR HEALTH">
+        <p>
+          <span data-lang="en">A connected healthcare platform — patient, doctor, and clinic in one journey.</span>
+          <span data-lang="ar">منصة رعاية صحية متّصلة — تجمع المريض والطبيب والعيادة في رحلة واحدة.</span>
+        </p>
+        <div class="social-row" style="margin-top: 14px;">
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2c-.2-1-1-1.7-1.9-2C18 4.8 12 4.8 12 4.8s-6 0-7.7.4c-.9.3-1.7 1-1.9 2C2 8.9 2 12 2 12s0 3.1.4 4.8c.2 1 1 1.7 1.9 2 1.7.4 7.7.4 7.7.4s6 0 7.7-.4c.9-.3 1.7-1 1.9-2 .4-1.7.4-4.8.4-4.8s0-3.1-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A10.4 10.4 0 0012 1C6.2 1 1.5 5.7 1.5 11.5c0 2 .5 4 1.6 5.7L1.5 23l6-1.6c1.7.9 3.6 1.4 5.5 1.4 5.8 0 10.5-4.7 10.5-10.5 0-2.8-1.1-5.4-3-7.3zM12 21c-1.7 0-3.3-.4-4.7-1.3l-.3-.2-3.6.9 1-3.5-.2-.4A8.5 8.5 0 013.5 11.5C3.5 6.8 7.3 3 12 3s8.5 3.8 8.5 8.5S16.7 21 12 21zm4.7-6.4c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.4c.1-.1.2-.3.3-.4 0-.2 0-.3 0-.4 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.1 0-.4 0-.6.3-.2.3-.8.8-.8 2 0 1.2.9 2.4 1 2.5.1.2 1.7 2.6 4.1 3.6 1.4.6 2 .7 2.7.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3z"/></svg></a>
+          <a href="#" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 3 2 11.5l5.5 2L20 6l-8.5 9 .5 5 3-3 4.5 3.5L22 3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4><span data-lang="en">Platform</span><span data-lang="ar">المنصة</span></h4>
+        <ul class="footer-links">
+          <li><a href="index.html#about"><span data-lang="en">About</span><span data-lang="ar">عن المنصة</span></a></li>
+          <li><a href="index.html#patients"><span data-lang="en">For patients</span><span data-lang="ar">للمرضى</span></a></li>
+          <li><a href="index.html#doctors"><span data-lang="en">For doctors</span><span data-lang="ar">للأطباء</span></a></li>
+          <li><a href="index.html#library"><span data-lang="en">Medical library</span><span data-lang="ar">المكتبة الطبية</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span data-lang="en">Trust</span><span data-lang="ar">الثقة</span></h4>
+        <ul class="footer-links">
+          <li><a href="index.html#trust"><span data-lang="en">Trust</span><span data-lang="ar">الثقة</span></a></li>
+          <li><a href="privacy.html"><span data-lang="en">Privacy policy</span><span data-lang="ar">سياسة الخصوصية</span></a></li>
+          <li><a href="terms.html"><span data-lang="en">Terms of use</span><span data-lang="ar">شروط الاستخدام</span></a></li>
+          <li><a href="data-protection.html"><span data-lang="en">Data protection</span><span data-lang="ar">حماية البيانات</span></a></li>
+          <li><a href="index.html#faq"><span data-lang="en">FAQ</span><span data-lang="ar">الأسئلة الشائعة</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span data-lang="en">Get the app</span><span data-lang="ar">التطبيق</span></h4>
+        <ul class="footer-links">
+          <li><a href="download.html">iOS</a></li>
+          <li><a href="download.html">Android</a></li>
+          <li><a href="doctor-signup.html"><span data-lang="en">Join as doctor</span><span data-lang="ar">انضم كطبيب</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span data-lang="en">Contact</span><span data-lang="ar">تواصل معنا</span></h4>
+        <ul class="footer-links">
+          <li><a href="contact.html"><span data-lang="en">Contact us</span><span data-lang="ar">صفحة التواصل</span></a></li>
+          <li><a href="mailto:hello@syrhealth.app">hello@syrhealth.app</a></li>
+          <li><a href="mailto:join@syrhealth.app">join@syrhealth.app</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> SyrHealth. <span data-lang="en">All rights reserved.</span><span data-lang="ar">جميع الحقوق محفوظة.</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Language toggle persistence
+  const saved = localStorage.getItem("syr_lang") || "ar";
+  document.documentElement.setAttribute("dir", saved === "ar" ? "rtl" : "ltr");
+  document.documentElement.setAttribute("lang", saved);
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Custom specialty toggle
+  document.getElementById("spec-select").addEventListener("change", (e) => {
+    const customField = document.getElementById("custom-spec-field");
+    customField.style.display = e.target.value === "other" ? "block" : "none";
+  });
+
+  // Form validation
+  const form = document.getElementById("doctor-form");
+  function validateField(field) {
+    const type = field.dataset.validate;
+    const val = (field.value || "").trim();
+    const wrap = field.closest(".f-field");
+    if (!wrap) return true;
+    wrap.classList.remove("invalid");
+    let valid = true;
+    if (type === "required" && !val) valid = false;
+    if (type === "email" && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) valid = false;
+    if (type === "phone" && val && val.replace(/\D/g, "").length < 8) valid = false;
+    if (type === "password" && val.length < 6) valid = false;
+    if (type === "match") {
+      const target = form.querySelector(`[name="${field.dataset.match}"]`);
+      if (target && val !== target.value) valid = false;
+    }
+    if (!valid) wrap.classList.add("invalid");
+    return valid;
+  }
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let ok = true;
+    form.querySelectorAll("[data-validate]").forEach((f) => {
+      if (!validateField(f)) ok = false;
+    });
+    const consent = form.querySelector("[name='consent']");
+    const consentErr = document.querySelector("[data-consent-err] .err");
+    if (!consent.checked) { consentErr.style.display = "block"; ok = false; }
+    else { consentErr.style.display = "none"; }
+    if (!ok) return;
+    // Show loading
+    const btn = document.getElementById("submit-btn");
+    btn.querySelector("[data-loading]").style.display = "inline";
+    btn.querySelectorAll("[data-default-en], [data-default-ar]").forEach(s => s.style.display = "none");
+    btn.disabled = true;
+    setTimeout(() => {
+      form.style.display = "none";
+      document.getElementById("success").style.display = "block";
+      window.scrollTo({ top: document.getElementById("success").offsetTop - 100, behavior: "smooth" });
+    }, 800);
+  });
+  // Hide both AR + EN siblings depending on the page lang
+  function applyLangHiding() {
+    const isAr = document.documentElement.getAttribute("dir") === "rtl";
+    document.querySelectorAll("[data-lang]").forEach(el => {
+      el.style.display = (isAr && el.dataset.lang === "ar") || (!isAr && el.dataset.lang === "en") ? "" : "none";
+    });
+  }
+  applyLangHiding();
+</script>
+</body>
+</html>
