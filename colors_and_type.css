@@ -1,0 +1,171 @@
+/*
+ * SYR Health — Design Tokens
+ * Brand: SYR HEALTH (نحو نظام صحي متكامل)
+ *
+ * Use these tokens for everything. Don't hand-roll new colors.
+ */
+
+/* Cairo + Arimo loaded from Google Fonts. */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&family=Arimo:wght@400;700&display=swap");
+
+:root {
+  /* ============================================================
+   * COLOR — Brand
+   * ============================================================ */
+  --syr-teal:           #0F8F8B; /* primary brand teal — buttons, headings, brand mark "SYR" */
+  --syr-teal-hover:     #0E827F;
+  --syr-teal-press:     #0B6C69;
+  --syr-teal-ring:      rgba(15, 143, 139, .35);
+  --syr-teal-10:        rgba(15, 143, 139, .10);
+  --syr-teal-20:        rgba(15, 143, 139, .20);
+  --syr-teal-50:        rgba(15, 143, 139, .50);
+
+  --syr-mint:           #16C5C0; /* bright accent — gradients, notification badge */
+  --syr-mint-2:         #14B3AE; /* gradient end stop */
+  --syr-mint-50:        rgba(22, 197, 192, .5); /* mint glow shadow */
+
+  /* Teal wash backgrounds (in increasing density) */
+  --syr-surface-soft:   #F7FAFA; /* near-white teal-tinted — main page bg behind cards */
+  --syr-surface-mint:   #E6F4F3; /* card hover, secondary surface, info banner */
+  --syr-surface-blob:   #C6E6E5; /* welcome-screen blob base */
+  --syr-blob-1:         #A9DDDB; /* welcome-screen gradient start */
+  --syr-blob-2:         #ADE9E7; /* welcome-screen gradient end */
+  --syr-surface-tab:    #D1F0EF; /* segmented-control inactive */
+
+  /* Neutrals (cool slate) */
+  --syr-ink:            #1F2937; /* primary text / headings on light bg */
+  --syr-ink-2:          #364153; /* secondary text */
+  --syr-ink-3:          #4A5565; /* tertiary / body */
+  --syr-ink-4:          #6B7280; /* muted */
+  --syr-ink-5:          #99A1AF; /* placeholder, disabled text */
+  --syr-line:           #E5E7EB; /* default divider */
+  --syr-line-2:         #D1D5DC;
+  --syr-bg-input:       #F3F3F5; /* form input background */
+  --syr-white:          #FFFFFF;
+  --syr-black:          #000000;
+
+  /* Semantic */
+  --syr-danger:         #FF000C; /* destructive text + outline */
+  --syr-danger-2:       #E7000B; /* destructive solid */
+  --syr-danger-shadow:  rgba(255, 0, 12, .25);
+  --syr-warning:        #FDC350; /* amber — pending / waiting status */
+  --syr-warning-ink:    #BB4D00;
+  --syr-success:        #00C950; /* green — active medications, success states */
+
+  /* Glass / chrome */
+  --syr-glass-bg:       rgba(255, 255, 255, .80); /* dashboard header */
+  --syr-glass-light:    rgba(255, 255, 255, .40); /* floating icon tiles */
+  --syr-glass-border:   rgba(255, 255, 255, .60);
+
+  /* ============================================================
+   * TYPE — families
+   * ============================================================ */
+  --font-display: "Cairo", "Segoe UI Arabic", Tahoma, sans-serif;
+  --font-body:    "Cairo", "Segoe UI Arabic", Tahoma, sans-serif;
+  --font-num:     "Arimo", "Cairo", "Segoe UI", Tahoma, sans-serif;
+
+  /* Type scale (px) */
+  --fs-12:  12px;
+  --fs-14:  14px;
+  --fs-16:  16px;
+  --fs-18:  18px;
+  --fs-20:  20px;
+  --fs-24:  24px;
+  --fs-30:  30px;
+
+  /* Line heights (px, matches Figma exactly) */
+  --lh-tight:   16px;  /* heading-in-card, tight numeric */
+  --lh-body:    20px;
+  --lh-normal:  24px;
+  --lh-loose:   28px;
+
+  /* Weights — Cairo */
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-black:    900;
+
+  /* ============================================================
+   * RADII
+   * ============================================================ */
+  --radius-sm:   8px;
+  --radius-md:  10px;
+  --radius-lg:  14px;
+  --radius-xl:  16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 32px;
+  --radius-full: 9999px;
+
+  /* ============================================================
+   * SPACING (4-based)
+   * ============================================================ */
+  --sp-1:   4px;
+  --sp-2:   8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-8:  32px;
+  --sp-12: 50px;
+
+  /* ============================================================
+   * SHADOWS
+   * ============================================================ */
+  --shadow-sm:    0 1px 2px -1px rgba(0,0,0,.10), 0 1px 3px 0 rgba(0,0,0,.10);
+  --shadow-md:    0 4px 6px -4px rgba(0,0,0,.10), 0 10px 15px -3px rgba(0,0,0,.10);
+  --shadow-lg:    0 8px 10px -6px rgba(0,0,0,.10), 0 20px 25px -5px rgba(0,0,0,.10);
+  --shadow-glow:  0 4px 6px -4px rgba(22,197,192,.5), 0 10px 15px -3px rgba(22,197,192,.5);
+  --shadow-danger:0 4px 6px -4px rgba(255,0,12,.25), 0 10px 15px -3px rgba(255,0,12,.25);
+
+  /* ============================================================
+   * MOTION
+   * ============================================================ */
+  --ease-out:   cubic-bezier(.0, .0, .2, 1);
+  --ease-inout: cubic-bezier(.4, .0, .2, 1);
+  --dur-fast:   120ms;
+  --dur-base:   200ms;
+  --dur-slow:   320ms;
+}
+
+/* ============================================================
+ * Semantic role tokens (h1, h2, body, code…)
+ * Use these in components — they map to the raw scale above.
+ * ============================================================ */
+:root {
+  --t-display-fz:   30px; --t-display-lh:  36px; --t-display-fw: 900;
+  --t-h1-fz:        24px; --t-h1-lh:       28px; --t-h1-fw:      700;
+  --t-h2-fz:        20px; --t-h2-lh:       28px; --t-h2-fw:      700;
+  --t-h3-fz:        18px; --t-h3-lh:       24px; --t-h3-fw:      700;
+  --t-h4-fz:        16px; --t-h4-lh:       24px; --t-h4-fw:      700;
+
+  --t-body-fz:      16px; --t-body-lh:     24px; --t-body-fw:    400;
+  --t-body-strong-fw: 600;
+  --t-small-fz:     14px; --t-small-lh:    20px; --t-small-fw:   400;
+  --t-caption-fz:   12px; --t-caption-lh:  16px; --t-caption-fw: 400;
+  --t-numeric-fz:   14px; --t-numeric-fw:  700; /* Arimo numerals */
+}
+
+/* Convenience classes (optional — use either var()s or these) */
+.t-display { font: var(--fw-black)    var(--t-display-fz)/var(--t-display-lh)   var(--font-display); color: var(--syr-ink); }
+.t-h1      { font: var(--fw-bold)     var(--t-h1-fz)/var(--t-h1-lh)             var(--font-display); color: var(--syr-ink); }
+.t-h2      { font: var(--fw-bold)     var(--t-h2-fz)/var(--t-h2-lh)             var(--font-display); color: var(--syr-ink); }
+.t-h3      { font: var(--fw-bold)     var(--t-h3-fz)/var(--t-h3-lh)             var(--font-display); color: var(--syr-ink); }
+.t-h4      { font: var(--fw-bold)     var(--t-h4-fz)/var(--t-h4-lh)             var(--font-display); color: var(--syr-ink); }
+.t-body    { font: var(--fw-regular)  var(--t-body-fz)/var(--t-body-lh)         var(--font-body);    color: var(--syr-ink); }
+.t-small   { font: var(--fw-regular)  var(--t-small-fz)/var(--t-small-lh)       var(--font-body);    color: var(--syr-ink-3); }
+.t-caption { font: var(--fw-regular)  var(--t-caption-fz)/var(--t-caption-lh)   var(--font-body);    color: var(--syr-ink-4); }
+.t-num     { font: 700 var(--t-numeric-fz)/16px                                 var(--font-num);     color: var(--syr-ink); }
+
+/* RTL helper — applies to whole document or scoped subtree */
+html[dir="rtl"], .rtl { direction: rtl; text-align: right; }
+
+/* Page background presets */
+.bg-page    { background: var(--syr-surface-soft); }
+.bg-mint    { background: var(--syr-surface-mint); }
+.bg-hero    { background: var(--syr-teal); color: #fff; }
+.bg-blob    {
+  background:
+    radial-gradient(120% 80% at 100% 0%, var(--syr-blob-1) 0%, var(--syr-blob-2) 60%, transparent 100%),
+    var(--syr-surface-blob);
+}
